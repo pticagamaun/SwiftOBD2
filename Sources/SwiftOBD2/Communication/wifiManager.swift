@@ -36,7 +36,7 @@ class WifiManager: CommProtocol {
     var tcp: NWConnection?
 
     func connectAsync(timeout: TimeInterval, peripheral: CBPeripheral? = nil) async throws {
-            let host = NWEndpoint.Host("192.168.0.11")
+            let host = NWEndpoint.Host("192.168.1.11")
             guard let port = NWEndpoint.Port("35000") else {
                 throw CommunicationError.invalidData
             }
